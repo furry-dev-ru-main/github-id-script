@@ -1,0 +1,10 @@
+name: 'ID_Commit'
+description: 'Add a user's ID to their github pull if not there'
+inputs:
+  files:
+    description: 'Files that need to be updated'
+    required: true
+    default: 'none'
+runs:
+  using: 'node20'
+  main: 'index.js'
