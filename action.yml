@@ -1,5 +1,5 @@
 name: 'ID_Commit'
-description: "Add a users ID to their github pull if not there"
+description: 'Add a users ID to their github pull if not there'
 inputs:
   files:
     description: 'Files that need to be updated'
