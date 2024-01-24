@@ -3,7 +3,7 @@ const github = await import('@actions/github');
 const fs = await import('node:fs');
 
 const files = core.getInput('files').split(" ");
-
+console.log(files)
 for(const file in files) {
     if(!file.startsWith("domains")) continue;
     const data = fs.readFileSync(file, 'utf8');
