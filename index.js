@@ -5,7 +5,7 @@ const fs = await import('node:fs');
 const files = core.getInput('files').split(" ");
 
 for(const file in files) {
-    if(!file.startsWith("./domains")) continue;
+    if(!file.startsWith("domains")) continue;
     const data = fs.readFileSync(file, 'utf8');
     let json = JSON.parse(data);
 
