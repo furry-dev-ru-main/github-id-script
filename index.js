@@ -9,14 +9,12 @@ for(const file of files) {
     console.log(data)
     let json = JSON.parse(data);
 
-    if(json.owner.hasOwnProperty("github_id")) {
-        console.log("Skipping " + file + " as github_id is already present");
-        continue;
-    }
-
     const username = json.owner.username;
     const api = await fetch("https://api.github.com/users/" + username);
     const api_json = await api.json();
+    if(!api_json.hasOwn("id")) {
+        core.setFailed("invalid username")
+    }
     json.owner.github_id = api_json.id;
 
     await fs.writeFileSync(file, JSON.stringify(json, null, 2));
