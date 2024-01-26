@@ -6,7 +6,6 @@ const files = core.getInput('files').split(" ");
 for(const file of files) {
     if(!file.startsWith("domains")) continue;
     const data = fs.readFileSync(file, 'utf8');
-    console.log(data)
     let json = JSON.parse(data);
 
     const username = json.owner.username;
