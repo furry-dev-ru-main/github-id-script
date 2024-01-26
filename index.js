@@ -10,10 +10,12 @@ for(const file of files) {
     let json = JSON.parse(data);
 
     const username = json.owner.username;
+    if(username === "is-a-dev") continue;
+
     const api = await fetch("https://api.github.com/users/" + username);
     const api_json = await api.json();
-    if(!api_json.hasOwn("id")) {
-        core.setFailed("invalid username")
+    if(!api_json.hasOwnProperty("id")) {
+        core.setFailed("invalid username");
     }
     json.owner.github_id = api_json.id;
 
