@@ -1,10 +1,13 @@
-name: 'ID_Commit'
-description: 'Add a users ID to their github pull if not there'
+name: "GitHub ID Script"
+description: "Add a user's GitHub ID to their is-a.dev pull request."
+branding:
+    icon: "user"
+    color: "purple"
 inputs:
-  files:
-    description: 'Files that need to be updated'
-    required: true
-    default: 'none'
+    files:
+        description: "Files that need to be updated"
+        required: true
+        default: "none"
 runs:
-  using: 'node20'
-  main: 'index.js'
+    using: "node20"
+    main: "index.js"
