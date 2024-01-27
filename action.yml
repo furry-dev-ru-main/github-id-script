@@ -8,6 +8,10 @@ inputs:
         description: "Files that need to be updated"
         required: true
         default: "none"
+    token:
+        description: "Auth-Token for GH API"
+        required: true
+        default: "none"
 runs:
     using: "node20"
     main: "index.js"
