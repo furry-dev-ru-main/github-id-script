@@ -1,5 +1,5 @@
 {
-  "name": "id_script",
+  "name": "github-id-script",
   "version": "1.0.0",
   "description": "A script to add people's github id's to their domain data, removing the need for updating the person's username every time.",
   "main": "index.js",
